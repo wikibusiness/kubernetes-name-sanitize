@@ -1,0 +1,13 @@
+name: 'kubernetes-name-sanitize'
+description: 'Sanitize a string for kubernetes names'
+inputs:
+  input:
+    description: 'Input'
+    required: true
+    default: ''
+outputs:
+  output: # id of output
+    description: 'The sanitized string'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
