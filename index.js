@@ -19,7 +19,7 @@ try {
   const input = core.getInput('input');
   console.log(`Input is ${input}!`);
   const output = sanitize(input);
-  core.setOutput("ouput", output);
+  core.setOutput("output", output);
   console.log(`The output: ${output}`);
 } catch (error) {
   core.setFailed(error.message);
