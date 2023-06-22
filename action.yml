@@ -5,6 +5,11 @@ inputs:
     description: 'Input'
     required: true
     default: ''
+  multiple:
+    description: 'Multiple inputs, comma separated'
+    required: false
+    default: false
+    type: boolean
 outputs:
   output: # id of output
     description: 'The sanitized string'

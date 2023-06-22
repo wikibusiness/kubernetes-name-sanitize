@@ -18,7 +18,9 @@ try {
   // `who-to-greet` input defined in action metadata file
   const input = core.getInput('input');
   console.log(`Input is ${input}!`);
-  const output = sanitize(input);
+  const multiple = core.getInput('multiple');
+
+  const output = multiple ? input.split(',').map(sanitize).join(',') : sanitize(input);
   core.setOutput("output", output);
   console.log(`The output: ${output}`);
 } catch (error) {
