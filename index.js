@@ -5,7 +5,7 @@ const sanitize = (val) => {
       return;
     }
     const sanitized = val.toLowerCase().replace(/\//g, '-').replace(/\./g, '-').replace(/[^a-z0-9\n-]/gi, '');
-    const properLength = sanitized.substring(0, 42)
+    const properLength = sanitized.substring(0, 34);
     const withoutDash = properLength[properLength.length-1] === "-" ?
       properLength.substring(0, properLength.length-1) :
       properLength;
